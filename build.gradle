@@ -9,6 +9,7 @@ buildscript {
 
 ext {
     apiguardianVersion = '1.0.0'
+    commonIoVersion = '2.6'
     junitVersion = '5.1.1'
 }
 
@@ -24,6 +25,7 @@ allprojects { subproj ->
     dependencies {
         testImplementation("org.apiguardian:apiguardian-api:$apiguardianVersion")
         testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+        testImplementation("commons-io:commons-io:$commonIoVersion")
         testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
         compile group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.59'
     }
